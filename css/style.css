@@ -6,14 +6,64 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'Montserrat' sans-serif;
+    line-height: 1.7;
 }
 
 header{
     height: 95vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url('../videos/Cover\ Video.mp4');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url('../images/Home\ Cover.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
+}
+
+.navbar{
+    border: 2px solid #ffffff;
+}
+
+.header .logo,
+.header .navbar a{
+    color: white;
+}
+
+.header .logo{
+    float: right;
+    font-size: 3.5rem;
+}
+
+.header .navbar .navbar-items{
+    float: none;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.header .navbar .nav-item{
+    display: inline-block;
+}
+
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+p, li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+}
+
+h1, h2, h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
 }
