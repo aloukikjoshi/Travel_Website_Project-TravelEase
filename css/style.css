@@ -27,10 +27,7 @@ header{
     border: 2px solid #ffffff;
 }
 
-.header .logo,
-.header .navbar a{
-    color: white;
-}
+
 
 .header .logo{
     float: right;
@@ -67,3 +64,28 @@ h1, h2, h3{
     letter-spacing: 0.15em;
     font-weight: 500;
 }
+
+.lg-heading{
+    font-size: 3.5rem;
+}
+
+.mg-heading{
+    font-size: 2.2rem;
+}
+
+.text-red{
+    color: #e63946;
+}
+
+.text_light{
+    color: #f4f4f4;
+}
+
+.text-black{
+    color: #333333;
+}
+
+.text-gray{
+    color: #555555;
+}
+
