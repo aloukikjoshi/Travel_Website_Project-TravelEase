@@ -11,7 +11,7 @@
 }
 
 body{
-    font-family: 'Montserrat' sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
 }
 
@@ -65,8 +65,8 @@ header{
 }
 
 .navbar{
-    border: 2px solid #ffffff;
     padding: 1rem;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
 }
 
 
@@ -110,7 +110,8 @@ p, li{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    
+    box-shadow: #1a1717;
 }
 
 .header-content p{
@@ -124,9 +125,11 @@ p, li{
 .btn{
     display: inline-block;
     padding: 0.5em;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     margin: 0 auto;
+    font-family: sans-serif monospace;
+    cursor: pointer;
 }
 
 .btn-primary{
@@ -134,6 +137,102 @@ p, li{
     border-radius: 100px;
 }
 
+.btn-primary:hover{
+    background-color: #ddd;
+}
+
+.btn-secondary{
+    border: 2px solid #e63946;
+    border-radius: 2.5rem;
+    color: #e63946;
+    background: #fff;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: 400;
+}
+
+.btn-secondary:hover{
+    background-color: #fcf3f2;
+}
+
 .navbar a:link, .navbar a:visited{
     color: #f4f4f4;
+}
+
+.showcase{
+    background: #ddd;
+    padding: 10rem 0;
+}
+
+.row{
+    height: 350px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px #aaa;       /*This can be done using opacity*/
+}
+
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.row1{
+    margin-bottom: 10rem;
+}
+
+.row1 .img-box, .row2 .text-box{
+    float: left;
+    width: 50%;
+}
+
+.row2 .img-box, .row1 .text-box{
+    float: right;
+    width: 50%;
+}
+
+.row .img-box{
+    height: 100%;
+}
+
+.row .text-box{
+    padding: 3rem;
+}
+
+.row .img-box img{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.features{
+    padding: 10rem 0;
+}
+
+
+.box{
+    width: 33.3333333%;
+    float: left;
+    padding: 2rem;
+    text-align: center;
+}
+
+.box-1, .box-3{
+    background-color: #263238;
+    color: #fff;
+}
+
+.box-2{
+    background: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+    color: #fff;
+}
+
+.box-wrapper{
+    box-shadow: 5px 5px 10px rgba(102, 102, 102, 0.521);
+}
+
+.box-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
 }
