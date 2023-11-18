@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Travel-Website-Name</title>
+    <script src="https://kit.fontawesome.com/5fed1fa091.js" crossorigin="anonymous"></script>
+    <title>TravelEase</title>
 </head>
 <body>
     <header class="header">   <!-- To Increase Specificity -->
@@ -23,10 +24,10 @@
             <h1 class="lg-heading text-light">Travel the World</h1>
             <p class="text-light">Discover. Explore. Wander. Your gateway to endless adventures.</p>
             <br>
-            <a href="./explore.html" class="btn btn-primary text-red md-heading">Explore Places</a>
+            <a href="#explore-places" class="btn btn-primary text-red md-heading">Explore Places</a>
         </div>
     </header>
-    <section class="showcase">
+    <section class="showcase" id="explore-places">
         <div class="container">
             <div class="row row1">
                 <div class="img-box">      <!--.row*2 emet shortcut-->
@@ -54,19 +55,30 @@
         <div class="container">
             <div class="box-wrapper">
                 <div class="box box-1">
+                    <i class="fa-solid fa-route fa-2x text text-red"></i>    <!--Classes for the i (icon) tag here are the special classes of Fontawesome-->
                     <h2 class="md-heading">Adventure</h2>          <!--h2.md-heading = emet shortcut-->
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore alias temporibus aut fugit porro sequi. Commodi delectus ab odio soluta?</p>
                 </div>
                 <div class="box box-2">
+                    <i class="fa-solid fa-strikethrough fa-2x"></i> <!--Classes for the i (icon) tag here are the special classes of Fontawesome-->
                     <h2 class="md-heading">Less Price</h2>          <!--h2.md-heading = emet shortcut-->
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore alias temporibus aut fugit porro sequi. Commodi delectus ab odio soluta?</p>
                 </div>
                 <div class="box box-3">
+                    <i class="fa-solid fa-user-check fa-2x text text-red"></i>   <!--Classes for the i (icon) tag here are the special classes of Fontawesome-->
                     <h2 class="md-heading">Experience</h2>          <!--h2.md-heading = emet shortcut-->
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore alias temporibus aut fugit porro sequi. Commodi delectus ab odio soluta?</p>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="social-media-links">
+            <i class="fa-brands fa-square-facebook fa-4x"></i>
+            <i class="fa-brands fa-square-x-twitter fa-4x"></i>
+            <i class="fa-brands fa-square-instagram fa-4x"></i>
+        </div>
+        <p>TravelEase &copy; 2024, All Rights Reserved</p>
+    </footer>
 </body>
 </html>
