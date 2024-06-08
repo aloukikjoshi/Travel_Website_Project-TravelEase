@@ -47,6 +47,8 @@ h1, h2, h3{
     color: #f4f4f4;
 }
 
+
+
 .text-black{
     color: #333333;
 }
@@ -55,18 +57,25 @@ h1, h2, h3{
     color: #555555;
 }
 
-header{
+.header{
     position: relative;
     height: 95vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url('../images/Home\ Cover.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url('/images/Home Cover.jpg');
     background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
+    background-size: 100% 100%; /* Change this line */
+    background-repeat: no-repeat; /* Change this line if you don't want the image to repeat */
 }
 
 .navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 1rem;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+
+.navbar.scrolled {
+    transition: all 0.5s ease-in-out;
 }
 
 .navbar .logo{
@@ -99,6 +108,7 @@ a{
 p, li{
     font-size: 1.6rem;
     margin-bottom: 0.5em;
+    margin-top: 0.75rem;
     letter-spacing: 0.15em;
 }
 
@@ -109,8 +119,6 @@ p, li{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    
-    box-shadow: #1a1717;
 }
 
 .header-content p{
@@ -219,6 +227,10 @@ p, li{
 .box-1, .box-3{
     background-color: #263238;
     color: #fff;
+}
+
+.box-1, .box-2{
+    padding-bottom: 47px;
 }
 
 .box-2{
@@ -586,4 +598,131 @@ p, li{
     .header{
         height: 90vmax;
     }
+}
+
+.search-bar {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    width: 300px;
+    margin-right: 1rem;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.destination-item {
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px #aaa;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.destination-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.destination-item h3 {
+    margin-top: 1rem;
+}
+
+.destination-item p {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    border: 2px solid #e63946;
+    border-radius: 2.5rem;
+    color: #e63946;
+    background: #fff;
+    padding: 0.5em 1em;
+}
+
+.btn-secondary:hover {
+    background-color: #fcf3f2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.container button {
+    background-color: #e63946;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container button:hover {
+    background-color: #fff;
+    color: #e63946;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#map, #places {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.search-container input[type="text"] {
+    flex-grow: 1;
 }
