@@ -5,77 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5fed1fa091.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script> <!--script.js is the file that contains the jQuery code-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=initMap"
             async defer></script>
     <title>TravelEase | Explore</title>
-    <script>
-        var map;
-        var service;
-        var infowindow;
-
-        function initMap() {
-            var sydney = new google.maps.LatLng(-33.867, 151.195);
-
-            infowindow = new google.maps.InfoWindow();
-
-            map = new google.maps.Map(
-                document.getElementById('map'), {center: sydney, zoom: 15});
-
-            var request = {
-                query: 'Museum of Contemporary Art Australia',
-                fields: ['name', 'geometry'],
-            };
-
-            service = new google.maps.places.PlacesService(map);
-
-            service.findPlaceFromQuery(request, function(results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        createMarker(results[i]);
-                    }
-
-                    map.setCenter(results[0].geometry.location);
-                }
-            });
-        }
-
-        function createMarker(place) {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location
-            });
-
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent(place.name);
-                infowindow.open(map, this);
-            });
-        }
-        function searchPlaces() {
-            var query = document.getElementById('search').value;
-
-            var request = {
-                query: query,
-                fields: ['name', 'geometry'],
-            };
-
-            service.findPlaceFromQuery(request, function(results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        createMarker(results[i]);
-                    }
-
-                    map.setCenter(results[0].geometry.location);
-                }
-            });
-        }
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Add an event listener to the search button
-            document.getElementById('search-btn').addEventListener('click', searchPlaces);
-        });
-        // Add an event listener to the search button
-        document.getElementById('search-btn').addEventListener('click', searchPlaces);
-    </script>
-    </script>
     <style>
         .navbar p, .navbar li{
             margin-top: 1.5rem;
